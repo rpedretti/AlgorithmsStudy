@@ -1,7 +1,11 @@
 # Purpose
 This repository is for me to keep track of the alforithms I've studied from [leetCode](https://leetcode.com/)
 
-If you want to try it
+If you want to try it:
+1. Clone
+1. Change 
+1. Run tests
+1. Repeat
 
 # Implemented algorithms
 
