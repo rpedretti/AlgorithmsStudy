@@ -19,6 +19,10 @@ namespace Algorithms.Tests
                 new List<int> { -1, 0, 1 }
             });
 
+            yield return new TestCaseData(new int[] { -2, -1, -1, 0, 3, 3, 4, 4 }).Returns(new List<IList<int>> {
+                new List<int> { -2, -1, 3 }
+            });
+
             yield return new TestCaseData(System.Array.Empty<int>()).Returns(new List<IList<int>> { });
             yield return new TestCaseData(new int[] { 0 }).Returns(new List<IList<int>> { });
         }

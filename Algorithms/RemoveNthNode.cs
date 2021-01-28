@@ -58,12 +58,12 @@ namespace Algorithms
             return res.next;
         }
 
-        private static ListNode CopyRec(ListNode toCopy)
-        {
-            return toCopy != null 
-                ? new ListNode(toCopy.val, CopyRec(toCopy.next))
-                : null;
-        }
+        //private static ListNode CopyRec(ListNode toCopy)
+        //{
+        //    return toCopy != null 
+        //        ? new ListNode(toCopy.val, CopyRec(toCopy.next))
+        //        : null;
+        //}
     }
 
     public class ListNode
