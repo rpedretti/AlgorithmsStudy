@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Algorithms.Extensions;
 
 namespace Algorithms
 {
@@ -9,7 +7,7 @@ namespace Algorithms
         public static ListNode Run(ListNode head, int n)
         {
             //do not change original list
-            var copy = CopyIter(head);
+            var copy = head.CopyIter();
 
             var dummy = new ListNode(0)
             {
@@ -38,43 +36,6 @@ namespace Algorithms
             second.next = second.next.next;
 
             return dummy.next;
-        }
-
-        private static ListNode CopyIter(ListNode toCopy)
-        {
-            ListNode dummy = new ListNode(0, toCopy);
-            ListNode res = dummy;
-
-            while (dummy != null)
-            {
-                if(dummy.next != null)
-                {
-                    dummy.next = new ListNode(dummy.next.val, dummy.next.next);
-                }
-                
-                dummy = dummy.next;
-            }
-
-            return res.next;
-        }
-
-        //private static ListNode CopyRec(ListNode toCopy)
-        //{
-        //    return toCopy != null 
-        //        ? new ListNode(toCopy.val, CopyRec(toCopy.next))
-        //        : null;
-        //}
-    }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode next;
-
-        public ListNode(int val = 0, ListNode next = null)
-        {
-            this.val = val;
-            this.next = next;
         }
     }
 }

@@ -6,13 +6,13 @@ namespace Algorithms.Tests
     [TestFixture]
     public class ThreeSumClosestTests
     {
-        [TestCaseSource(typeof(ThreeSumClosestTests), nameof(ThreeSumClosestTests.TestData))]
+        [TestCaseSource(nameof(TestData))]
         public IList<IList<int>> Test(int[] nums)
         {
             return ThreeSum.Run(nums);
         }
 
-        public static IEnumerable<TestCaseData> TestData()
+        static IEnumerable<TestCaseData> TestData()
         {
             yield return new TestCaseData(new int[] { -1, 0, 1, 2, -1, -4 }).Returns(new List<IList<int>> {
                 new List<int> { -1, -1, 2 },

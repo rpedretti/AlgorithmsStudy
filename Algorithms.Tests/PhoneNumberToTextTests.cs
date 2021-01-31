@@ -6,13 +6,13 @@ namespace Algorithms.Tests
     [TestFixture]
     public class PhoneNumberToTextTests
     {
-        [TestCaseSource(typeof(PhoneNumberToTextTests), nameof(PhoneNumberToTextTests.TestData))]
+        [TestCaseSource(nameof(TestData))]
         public IList<string> Test(string phone)
         {
             return PhoneNumberToText.Run(phone);
         }
 
-        public static IEnumerable<TestCaseData> TestData()
+        static IEnumerable<TestCaseData> TestData()
         {
             yield return new TestCaseData("23").Returns(new List<string> {
                 "ad", "ae", "af",
